@@ -1,0 +1,23 @@
+{
+  "name": "@oovui/vui-workspaces",
+  "version": "1.0.0",
+  "description": "@oovui/vui-workspaces-project",
+  "main": "index.js",
+  "workspaces": [
+    "packages"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "components",
+    "ui",
+    "library",
+    "typescript",
+    "vue3",
+    "workspaces"
+  ],
+  "author": "itshizhan",
+  "license": "MIT"
+}
