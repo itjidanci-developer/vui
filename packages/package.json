@@ -1,22 +1,38 @@
 {
-  "name": "@oovui/vui",
-  "version": "0.0.1",
-  "description": "",
-  "main": "lib/oovui.umd.js",
-  "module": "lib/oovui.esm.js",
+  "name": "itshizhan-vui",
+  "version": "0.0.2",
+  "description": "a Vue 3 components library based on TypeScript for itjidanci-developer-cms",
+  "main": "lib/itshizhan-vui.umd.js",
+  "module": "lib/itshizhan-vui.esm.js",
   "scripts": {
-    "build": "rollup --config rollup.config.esm.js --watch components",
+    "build": "rimraf lib/* && rollup --config rollup.config.esm.js --watch components",
     "build:umd": "rollup --config rollup.config.umd.js",
     "build:esm": "rollup --config rollup.config.esm.js",
     "pub": "npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "types": "lib/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "vue",
+    "components",
+    "ui",
+    "library",
+    "typescript",
+    "vue3",
+    "workspaces"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itjidanci-developer/vui"
+  },
+  "author": {
+    "name": "itshizhan",
+    "email": "itshizhan@163.com"
+  },
+  "license": "MIT",
   "peerDependencies": {
     "vue": "^3.0.2"
   },
@@ -40,8 +56,10 @@
     "eslint": "^7.0.0",
     "eslint-plugin-vue": "^7.0.0",
     "postcss": "^8.2.1",
+    "rimraf": "^2.6.3",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-scss": "^2.6.1",
+    "rollup-plugin-typescript2": "^0.29.0",
     "rollup-plugin-vue": "^6.0.0",
     "sass": "^1.30.0",
     "tslib": "^2.0.3",

@@ -4,6 +4,7 @@
     "module": "esnext",
     "strict": true,
     "declaration": true,
+    "declarationMap":true,
     "jsx": "preserve",
     "outDir": "lib",
     "declarationDir":"lib",

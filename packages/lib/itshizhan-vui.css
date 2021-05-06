@@ -583,3 +583,50 @@ input[type=checkbox], input[type=radio] {
 .p-cls .p1 {
   display: grid;
 }
+
+.vui-pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 1rem 0;
+  font-size: 0;
+  list-style: none;
+  user-select: none;
+}
+.vui-pagination > .paging-item {
+  display: inline-block;
+  font-size: 12px;
+  position: relative;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  color: #7b7b7b;
+  margin-left: 10px;
+}
+.vui-pagination > .paging-item:first-child {
+  margin-left: 0;
+}
+.vui-pagination > .paging-item:hover {
+  background-color: #f0f0f0;
+  color: #e60012;
+}
+.vui-pagination > .paging-item.paging-item--disabled, .vui-pagination > .paging-item.paging-item--more {
+  background-color: #fff;
+  color: #505050;
+}
+.vui-pagination > .paging-item.paging-item--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.vui-pagination > .paging-item.paging-item--more, .vui-pagination > .paging-item.paging-item--current {
+  cursor: default;
+}
+.vui-pagination > .paging-item.paging-item--current {
+  background-color: #3bc264;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  border-color: #3bc264;
+}

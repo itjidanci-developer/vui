@@ -3,8 +3,8 @@ import base , {banner} from './rollup.config.base';
 const config = Object.assign({}, base, {
   output: {
 
-    name: 'oovui',
-    file: 'lib/oovui.umd.js',
+    name: 'itshizhanVui',
+    file: 'lib/itshizhan-vui.umd.js',
     format: 'umd',
     banner,
     globals: {

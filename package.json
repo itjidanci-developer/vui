@@ -1,7 +1,7 @@
 {
-  "name": "@oovui/vui-workspaces",
+  "name": "@itshizhan/vui-workspaces",
   "version": "1.0.0",
-  "description": "@oovui/vui-workspaces-project",
+  "description": "@itshizhan/vui-workspaces-project",
   "main": "index.js",
   "workspaces": [
     "packages"

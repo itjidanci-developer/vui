@@ -1,5 +1,5 @@
 # vui
- a Vue 3 components library based on TypeScript for itjidanci-developer-cms.
+ a Vue UI components library based on  vue 3 and TypeScript.
 
 # description
 
