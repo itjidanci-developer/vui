@@ -571,6 +571,83 @@ input[type=checkbox], input[type=radio] {
   padding-right: 50px !important;
 }
 
+.itvui-input-wrapper .itvui-input {
+  height: 100%;
+  padding: 0.5em 0.6em;
+  border: none;
+  background-color: white;
+  transition: all 0.5s;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+}
+.itvui-input-wrapper .itvui-input.disabled {
+  cursor: not-allowed;
+  background: #f5f6f6;
+  color: #c5cbd7;
+}
+.itvui-input-wrapper .itvui-input-prepend-append {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2em 0;
+}
+.itvui-input-wrapper .itvui-input-inner-body {
+  flex: 1;
+  border: 1px solid #aaa;
+  border-radius: 0.2em;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0 6px;
+}
+.itvui-input-wrapper .itvui-input-inner-body.itvui-input-has-prepend {
+  border-radius: 0 0.2em 0.2em 0;
+}
+.itvui-input-wrapper .itvui-input-inner-body.itvui-input-has-append {
+  border-radius: 0.2em 0 0 0.2em;
+}
+.itvui-input-wrapper .itvui-input-inner-body.itvui-input-has-prepend.itvui-input-has-append {
+  border-radius: 0;
+}
+.itvui-input-wrapper .itvui-input-inner-body.itvui-input-no-prefix {
+  padding: 0;
+}
+.itvui-input-wrapper .itvui-input-inner-body.disabled {
+  cursor: not-allowed;
+  color: #c5cbd7;
+}
+.itvui-input-wrapper .itvui-input-prepend {
+  border: 1px solid #aaa;
+  border-right: none;
+  border-radius: 0.2em 0 0 0.2em;
+  height: 100%;
+  padding: 0.5em 0.6em;
+  background-color: #fafbfd;
+  color: #555555;
+  font-size: 14px;
+}
+.itvui-input-wrapper .itvui-input-append {
+  border: 1px solid #aaa;
+  border-left: none;
+  border-radius: 0 0.2em 0.2em 0;
+  height: 100%;
+  padding: 0.5em 0.6em;
+  background-color: #fafbfd;
+  color: #555555;
+  font-size: 14px;
+}
+.itvui-input-wrapper .itvui-input-prefix, .itvui-input-wrapper .itvui-input-suffix {
+  display: inline-flex;
+}
+.itvui-input-wrapper .itvui-input-message {
+  font-size: 13px;
+}
+
 .p-cls {
   text-align: center;
   display: flex;

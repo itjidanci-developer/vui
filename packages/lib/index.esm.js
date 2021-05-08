@@ -1,9 +1,9 @@
 /*!
- *  @oovui/vue v0.0.2
- * (c) 2018-2020 itshizhan@163.com
+ *  @itshizhan/vui v0.0.2
+ * (c) 2018-2021 itshizhan@163.com
  * Released under the MIT License.
  */
-import { defineComponent, openBlock, createBlock, createVNode, toDisplayString, ref, onMounted, computed, createCommentVNode, Fragment, renderList } from 'vue';
+import { defineComponent, openBlock, createBlock, createVNode, toDisplayString, ref, resolveComponent, createCommentVNode, renderSlot, mergeProps, onMounted, computed, Fragment, renderList } from 'vue';
 
 var script = defineComponent({
     name: 'VHello',
@@ -29,7 +29,134 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 script.render = render;
 script.__file = "components/hello/VHello.vue";
 
+/**
+ *  input 组件HTML结构如下：
+ *  label + 前缀 + 前icon + input + 后icon + 后缀 + message
+ */
+// import EyeIcon from '../../icons/EyeIcon.vue';
+// import EyeSlashIcon from '../../icons/EyeSlashIcon.vue';
 var script$1 = defineComponent({
+    name: 'v-input',
+    // components: {
+    // 	EyeIcon,
+    // 	EyeSlashIcon,
+    // },
+    inheritAttrs: false,
+    props: {
+        type: {
+            type: String,
+            default: 'text',
+        },
+        placeholder: String,
+        modelValue: String,
+        disabled: Boolean,
+        label: String,
+        message: String,
+    },
+    emits: ['update:modelValue'],
+    setup(props, { emit }) {
+        const focus = ref(false);
+        function inputHandle(e) {
+            emit('update:modelValue', e.target.value);
+        }
+        return {
+            inputHandle,
+            focus,
+        };
+    },
+});
+
+const _hoisted_1$1 = { class: "itvui-input-wrapper" };
+const _hoisted_2$1 = {
+  key: 0,
+  class: "itvui-input-label"
+};
+const _hoisted_3$1 = { class: "itvui-input-prepend-append" };
+const _hoisted_4 = {
+  key: 0,
+  class: "itvui-input-prepend"
+};
+const _hoisted_5 = {
+  key: 0,
+  class: "itvui-input-prefix"
+};
+const _hoisted_6 = {
+  key: 1,
+  class: "itvui-input-suffix"
+};
+const _hoisted_7 = {
+  key: 1,
+  class: "itvui-input-append"
+};
+const _hoisted_8 = {
+  key: 1,
+  class: "itvui-input-message"
+};
+
+function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_EyeIcon = resolveComponent("EyeIcon");
+  const _component_EyeSlashIcon = resolveComponent("EyeSlashIcon");
+
+  return (openBlock(), createBlock("div", _hoisted_1$1, [
+    (_ctx.label)
+      ? (openBlock(), createBlock("span", _hoisted_2$1, toDisplayString(_ctx.label), 1 /* TEXT */))
+      : createCommentVNode("v-if", true),
+    createVNode("div", _hoisted_3$1, [
+      (_ctx.$slots.prepend)
+        ? (openBlock(), createBlock("div", _hoisted_4, [
+            renderSlot(_ctx.$slots, "prepend")
+          ]))
+        : createCommentVNode("v-if", true),
+      createVNode("div", {
+        class: ["itvui-input-inner-body", {
+            'itvui-input-has-prepend': _ctx.$slots.prepend,
+            'itvui-input-has-append': _ctx.$slots.append,
+            'itvui-input-no-prefix': !_ctx.$slots.prefix,
+            'disabled': _ctx.disabled,
+          }]
+      }, [
+        (_ctx.$slots.prefix)
+          ? (openBlock(), createBlock("span", _hoisted_5, [
+              renderSlot(_ctx.$slots, "prefix")
+            ]))
+          : createCommentVNode("v-if", true),
+        createVNode("input", mergeProps({
+          class: ["itvui-input", {
+            'disabled': _ctx.disabled
+          }],
+          type: _ctx.type,
+          value: _ctx.modelValue,
+          onInput: _cache[1] || (_cache[1] = (...args) => (_ctx.inputHandle && _ctx.inputHandle(...args))),
+          placeholder: _ctx.placeholder
+        }, _ctx.$attrs, {
+          disabled: _ctx.disabled,
+          onFocus: _cache[2] || (_cache[2] = $event => (_ctx.focus = true)),
+          onBlur: _cache[3] || (_cache[3] = $event => (_ctx.focus = false))
+        }), null, 16 /* FULL_PROPS */, ["type", "value", "placeholder", "disabled"]),
+        (_ctx.$slots.suffix)
+          ? (openBlock(), createBlock("span", _hoisted_6, [
+              renderSlot(_ctx.$slots, "suffix")
+            ]))
+          : createCommentVNode("v-if", true),
+         createCommentVNode("v-if", true),
+         createCommentVNode("v-if", true)
+      ], 2 /* CLASS */),
+      (_ctx.$slots.append)
+        ? (openBlock(), createBlock("div", _hoisted_7, [
+            renderSlot(_ctx.$slots, "append")
+          ]))
+        : createCommentVNode("v-if", true)
+    ]),
+    (_ctx.message)
+      ? (openBlock(), createBlock("span", _hoisted_8, toDisplayString(_ctx.message), 1 /* TEXT */))
+      : createCommentVNode("v-if", true)
+  ]))
+}
+
+script$1.render = render$1;
+script$1.__file = "components/input/VInput.vue";
+
+var script$2 = defineComponent({
     name: 'v-pagination',
     props: {
         //奇数,可展示为...
@@ -126,10 +253,10 @@ var script$1 = defineComponent({
     },
 });
 
-const _hoisted_1$1 = { class: "vui-pagination" };
+const _hoisted_1$2 = { class: "vui-pagination" };
 
-function render$1(_ctx, _cache, $props, $setup, $data, $options) {
-  return (openBlock(), createBlock("ul", _hoisted_1$1, [
+function render$2(_ctx, _cache, $props, $setup, $data, $options) {
+  return (openBlock(), createBlock("ul", _hoisted_1$2, [
     createVNode("li", {
       class: [
 				'paging-item',
@@ -170,10 +297,10 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$1.render = render$1;
-script$1.__file = "components/pagination/VPagination.vue";
+script$2.render = render$2;
+script$2.__file = "components/pagination/VPagination.vue";
 
-const components = [script, script$1];
+const components = [script, script$1, script$2];
 function install(Vue) {
     components.forEach((component) => {
         Vue.component(component.name, component);
@@ -182,4 +309,4 @@ function install(Vue) {
 var index = { install };
 
 export default index;
-//# sourceMappingURL=itshizhan-vui.esm.js.map
+//# sourceMappingURL=index.esm.js.map

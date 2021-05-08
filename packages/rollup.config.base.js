@@ -13,7 +13,7 @@ import sass from 'sass'
 // import postcss from 'postcss'
 const banner =
   '/*!\n' +
-  ' *  @oovui/vue v' + pkgConfig.version + '\n' +
+  ' *  @itshizhan/vui v' + pkgConfig.version + '\n' +
   ' * (c) 2018-' + new Date().getFullYear() + ' itshizhan@163.com\n' +
   ' * Released under the MIT License.\n' +
   ' */';
@@ -39,7 +39,7 @@ export default {
     scss({
       sass:sass,
       output: function (styles) {
-        fs.writeFileSync('lib/itshizhan-vui.css', styles);
+        fs.writeFileSync('lib/index.css', styles);
       },
       // Prefix global scss. Useful for variables and mixins.
       // prefix: `@import "./styles/global.scss";`,

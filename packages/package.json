@@ -1,9 +1,9 @@
 {
-  "name": "itshizhan-vui",
+  "name": "@itshizhan/vui",
   "version": "0.0.2",
-  "description": "a Vue 3 components library based on TypeScript for itjidanci-developer-cms",
-  "main": "lib/itshizhan-vui.umd.js",
-  "module": "lib/itshizhan-vui.esm.js",
+  "description": "a Vue UI components library based on  vue 3 and TypeScript.",
+  "main": "lib/index.umd.js",
+  "module": "lib/index.esm.js",
   "scripts": {
     "build": "rimraf lib/* && rollup --config rollup.config.esm.js --watch components",
     "build:umd": "rollup --config rollup.config.umd.js",
@@ -26,7 +26,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/itjidanci-developer/vui"
+    "url": "https://github.com/itshizhan-developer/vui"
   },
   "author": {
     "name": "itshizhan",

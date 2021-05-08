@@ -4,7 +4,7 @@ const config = Object.assign({}, base, {
   output: {
 
     name: 'itshizhanVui',
-    file: 'lib/itshizhan-vui.umd.js',
+    file: 'lib/index.umd.js',
     format: 'umd',
     banner,
     globals: {

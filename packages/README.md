@@ -1,9 +1,9 @@
 # Introduction
-a Vue 3 components library based on TypeScript for itjidanci-developer-cms.
+ a Vue UI components library based on  vue 3 and TypeScript.
 
 # Install
 ```
-npm install itshizhan-vui -S
+npm install @itshizhan/vui -S
 ```
 
 # Usage
@@ -12,11 +12,11 @@ npm install itshizhan-vui -S
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-import itshizhanVui from "itshizhan-vui";
-import "itshizhan-vui/lib/itshizhan-vui.css";
+import Vui from "@itshizhan/vui";
+import "@itshizhan/vui/lib/index.css";
 
 createApp(App)
   .use(router)
-  .use(itshizhanVui)
+  .use(Vui)
   .mount("#app");
 ```
