@@ -1,6 +1,6 @@
 {
   "name": "@itshizhan/vui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a Vue UI components library based on  vue 3 and TypeScript.",
   "main": "lib/index.umd.js",
   "module": "lib/index.esm.js",
